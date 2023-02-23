@@ -1,8 +1,8 @@
-<div [hidden]="showPicture" class="divCover">
+<div [hidden]="!showPicture" class="divCover">
   <div class="picture"></div>
   <h2 class="divLetter">Asegura tu futuro!!</h2>
 </div>
-<div [hidden]="!showPicture">
+<div [hidden]="showPicture">
   <h2 class="globalTitle">Resultado del calculo de tu inversion</h2>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { InvesmentData } from 'src/app/models/invesment-data.model';
+import { InvesmentData } from 'src/app/models/investmentData.model';
+import { CalculatorServiceService } from 'src/app/services/calculator.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-form',
@@ -27,7 +29,8 @@ export class FormComponent {
 
   onSubmit() {
     console.log(this.model);
-    
+    this.calculatorServiceService.requestCalculus(this.model).subscribe((response: InvesmentData) => console.log(response));
+   /* this.calculatorServiceService.requestCalculus(this.model); */
     /*  if (this.formularioContacto.valid)
       this.resultado = 'Todos los datos son válidos';
     else this.resultado = 'Hay datos inválidos en el formulario'; */

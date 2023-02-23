@@ -5,7 +5,7 @@
       
       <mat-label for="initialInvestment">$ Inversión inicial</mat-label>
       <input type="number" matInput name="initialInvestment" placeholder="$0"
-      [(ngModel)]="model.initialInvestment" required="required">
+      [(ngModel)]="model.initialBalance" required="required">
       <mat-icon matSuffix>edit_calendar</mat-icon>
     </mat-form-field>
     <br>
@@ -19,14 +19,14 @@
     <mat-form-field class="example-full-width">
       <mat-label for="annualIncrease">% Incremento anual</mat-label>
       <input type="number" matInput name="annualIncrease" placeholder="0%"
-      [(ngModel)]="model.annualIncrease" required="required">
+      [(ngModel)]="model.annualIcrease" required="required">
       <mat-icon matSuffix>timeline</mat-icon>
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
       <mat-label for="investmenYears">Años de inversión</mat-label>
       <input type="number" matInput name="investmenYears" placeholder="0"
-      [(ngModel)]="model.investmenYears" required="required">
+      [(ngModel)]="model.investmentYears" required="required">
       <mat-icon matSuffix>calendar_month</mat-icon>
     </mat-form-field>
     <br>
