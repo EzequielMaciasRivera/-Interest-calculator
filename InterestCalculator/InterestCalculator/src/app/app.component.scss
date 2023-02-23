@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+.pageTitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.8rem;
+  margin: 1.5rem 0 0 1rem;
+  color: #87357d;
+}
+
+.section {
+  display: flex;
+  width: 98.8%;
+  height: 100vh;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.boxesDiv1 {
+  background-color: palevioletred;
+  font-size: 2rem;
+  color: white;
+  flex: 1 400px;
+  padding: 1rem; 
+  margin: 1rem 0 0.5rem 0;
+  text-align: -webkit-center;
+  border-radius: 1rem;
+  background-image: url(./../assets/trabajo-equipo.jpg);
+  background-size: cover;
+  font-family: sans-serif;
+  background-position: center;
+}
+.boxesDiv {
+  background-color: palevioletred;
+  font-size: 2rem;
+  color: white;
+  flex: 1 400px;
+  padding: 1rem;
+  margin: 0.5rem;
+  text-align: -webkit-center;
+  border-radius: 1rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.footerSetting {
+  background: #87357d;
+  margin: 0;
+  border-radius: 0px 88px 0px 59px;
+}
