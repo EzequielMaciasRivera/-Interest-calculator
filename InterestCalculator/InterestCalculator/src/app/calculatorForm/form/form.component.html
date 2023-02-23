@@ -1,44 +1,44 @@
 <div class="formCard">
   <h1 class="globalTitle">Calcula el monto que podrías generar al realizar una inversión como Inversionista Independiente</h1>
-  <form (ngSubmit)="submit()">
+  <form (ngSubmit)="onSubmit()">
     <mat-form-field class="example-full-width">
       
-      <mat-label>$ Inversión inicial</mat-label>
-      <input type="number" matInput name="initialInvestment" placeholder="$0" required="required">
+      <mat-label for="initialInvestment">$ Inversión inicial</mat-label>
+      <input type="number" matInput name="initialInvestment" placeholder="$0"
+      [(ngModel)]="model.initialInvestment" required="required">
       <mat-icon matSuffix>edit_calendar</mat-icon>
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
-      <mat-label>$ Aportacion anual</mat-label>
-      <input type="number" matInput name="initialInvestment" placeholder="$0" required="required">
+      <mat-label for="annualContribution">$ Aportacion anual</mat-label>
+      <input type="number" matInput name="annualContribution" placeholder="$0"
+      [(ngModel)]="model.annualContribution" required="required">
       <mat-icon matSuffix>trending_up</mat-icon>
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
-      <mat-label>% Incremento anual</mat-label>
-      <input type="number" matInput name="initialInvestment" placeholder="0%" required="required">
+      <mat-label for="annualIncrease">% Incremento anual</mat-label>
+      <input type="number" matInput name="annualIncrease" placeholder="0%"
+      [(ngModel)]="model.annualIncrease" required="required">
       <mat-icon matSuffix>timeline</mat-icon>
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
-      <mat-label>Años de inversión</mat-label>
-      <input type="number" matInput name="initialInvestment" placeholder="0" required="required">
+      <mat-label for="investmenYears">Años de inversión</mat-label>
+      <input type="number" matInput name="investmenYears" placeholder="0"
+      [(ngModel)]="model.investmenYears" required="required">
       <mat-icon matSuffix>calendar_month</mat-icon>
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
-      <mat-label>% Rendimiento</mat-label>
-      <input type="number" matInput name="initialInvestment" placeholder="0%" required="required">
+      <mat-label for="performance">% Rendimiento</mat-label>
+      <input type="number" matInput name="performance" placeholder="0%"
+      [(ngModel)]="model.performance" required="required">
       <mat-icon matSuffix>leaderboard</mat-icon>
     </mat-form-field>
-   <!--  <input type="text" name="nombre" placeholder="" [(ngModel)]="mascotaModel.nombre">
-    <br><br>
-    <input type="text" name="raza" placeholder="Raza de mascota" [(ngModel)]="mascotaModel.raza">
-    <br><br>
-    <input type="number" name="edad" placeholder="Edad de mascota" [(ngModel)]="mascotaModel.edad"> -->
     <br>
     <div class="example-button-container">
-      <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+      <button type="submit" mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
         <mat-icon>savings</mat-icon>
       </button>
     </div>
