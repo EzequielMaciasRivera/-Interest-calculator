@@ -4,33 +4,39 @@
 </div>
 <div [hidden]="showPicture">
   <h2 class="globalTitle">Resultado del calculo de tu inversion</h2>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" aria-describedby="Interest table">
 
     <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    <!-- investmentYears Column -->
+    <ng-container matColumnDef="investmentYears">
+      <th mat-header-cell *matHeaderCellDef scope="col"> Año </th>
+      <td mat-cell *matCellDef="let element"> {{element.investmentYears}} </td>
     </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <!-- initialBalance Column -->
+    <ng-container matColumnDef="initialBalance">
+      <th mat-header-cell *matHeaderCellDef scope="col"> Saldo Inicial </th>
+      <td mat-cell *matCellDef="let element"> {{element.initialBalance}} </td>
     </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    <!-- annualContribution Column -->
+    <ng-container matColumnDef="annualContribution">
+      <th mat-header-cell *matHeaderCellDef scope="col"> Rendimiento </th>
+      <td mat-cell *matCellDef="let element"> {{element.annualContribution}} </td>
     </ng-container>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    <!-- performance Column -->
+    <ng-container matColumnDef="performance">
+      <th mat-header-cell *matHeaderCellDef scope="col"> Aportación </th>
+      <td mat-cell *matCellDef="let element"> {{element.performance}} </td>
+    </ng-container>
+
+    <!-- annualIcrease Column -->
+    <ng-container matColumnDef="annualIcrease">
+      <th mat-header-cell *matHeaderCellDef scope="col"> Saldo Final </th>
+      <td mat-cell *matCellDef="let element"> {{element.annualIcrease}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

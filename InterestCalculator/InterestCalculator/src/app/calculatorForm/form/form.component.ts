@@ -28,6 +28,7 @@ export class FormComponent {
     constructor(private calculatorServiceService: CalculatorServiceService){}
 
   onSubmit() {
+    this.calculatorServiceService.interestRequestData$.next(false);
     console.log(this.model);
     this.calculatorServiceService.requestCalculus(this.model).subscribe((response: InvesmentData) => console.log(response));
    /* this.calculatorServiceService.requestCalculus(this.model); */
