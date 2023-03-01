@@ -9,7 +9,7 @@ import { CdkStepperModule } from '@angular/cdk/stepper';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
@@ -92,7 +92,8 @@ import { MatTreeModule } from '@angular/material/tree';
         MatTreeModule,
         OverlayModule,
         PortalModule,
-        ScrollingModule
+        ScrollingModule,
+        ReactiveFormsModule
     ]
 })
 export class Material {}

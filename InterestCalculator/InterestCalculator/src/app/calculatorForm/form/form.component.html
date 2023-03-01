@@ -1,46 +1,52 @@
 <div class="formCard">
-  <h1 class="globalTitle">Calcula el monto que podrías generar al realizar una inversión como Inversionista Independiente</h1>
-  <form (ngSubmit)="onSubmit()">
-    <mat-form-field class="example-full-width">
-      
-      <mat-label for="initialInvestment">$ Inversión inicial</mat-label>
-      <input type="number" matInput name="initialInvestment" placeholder="$0"
-      [(ngModel)]="model.initialBalance" required="required">
-      <mat-icon matSuffix>edit_calendar</mat-icon>
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label for="annualContribution">$ Aportacion anual</mat-label>
-      <input type="number" matInput name="annualContribution" placeholder="$0"
-      [(ngModel)]="model.annualContribution" required="required">
-      <mat-icon matSuffix>trending_up</mat-icon>
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label for="annualIncrease">% Incremento anual</mat-label>
-      <input type="number" matInput name="annualIncrease" placeholder="0%"
-      [(ngModel)]="model.annualIcrease" required="required">
-      <mat-icon matSuffix>timeline</mat-icon>
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label for="investmenYears">Años de inversión</mat-label>
-      <input type="number" matInput name="investmenYears" placeholder="0"
-      [(ngModel)]="model.investmentYears" required="required">
-      <mat-icon matSuffix>calendar_month</mat-icon>
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-      <mat-label for="performance">% Rendimiento</mat-label>
-      <input type="number" matInput name="performance" placeholder="0%"
-      [(ngModel)]="model.performance" required="required">
-      <mat-icon matSuffix>leaderboard</mat-icon>
-    </mat-form-field>
-    <br>
-    <div class="example-button-container">
-      <button type="submit" mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
-        <mat-icon>savings</mat-icon>
-      </button>
-    </div>
-  </form>
+  <h1 class="globalTitle">Calcula el monto que podrías generar al realizar una inversión como Inversionista
+    Independiente</h1>
+  <div novalidate>
+
+
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
+
+      <mat-form-field class="form-element">
+        <mat-label for="initialInvestment">$ Inversión inicial</mat-label>
+        <input type="number" matInput name="initialInvestment" placeholder="$0"
+          required="required">
+        <mat-icon matSuffix>edit_calendar</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="form-element">
+        <mat-label for="annualContribution">$ Aportacion anual</mat-label>
+        <input type="number" matInput name="annualContribution" placeholder="$0"
+          required="required">
+        <mat-icon matSuffix>trending_up</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="form-element">
+        <mat-label for="annualIncrease">% Incremento anual</mat-label>
+        <input type="number" matInput name="annualIncrease" placeholder="0%"
+          required="required">
+        <mat-icon matSuffix>timeline</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="form-element">
+        <mat-label for="investmenYears">Años de inversión</mat-label>
+        <input type="number" matInput name="investmenYears" placeholder="0"
+          required="required">
+        <mat-icon matSuffix>calendar_month</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="form-element">
+        <mat-label for="performance">% Rendimiento</mat-label>
+        <input type="number" matInput name="performance" placeholder="0%"
+          required="required">
+        <mat-icon matSuffix>leaderboard</mat-icon>
+      </mat-form-field>
+
+      <div class="example-button-container">
+        <button type="submit" mat-fab color="accent" aria-label="Example icon button with a bookmark icon"
+        [disabled]="!formGroup.valid" [ngClass]="{'disabled-save-btn' : formGroup.invalid}">
+          <mat-icon [ngClass]="{'disabled-save-btn-icon': !formGroup.invalid}">savings</mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
