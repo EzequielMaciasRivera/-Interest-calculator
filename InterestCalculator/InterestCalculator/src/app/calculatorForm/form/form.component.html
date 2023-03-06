@@ -43,7 +43,7 @@
 
       <div class="example-button-container">
         <button type="submit" mat-fab color="accent" aria-label="Example icon button with a bookmark icon"
-        [disabled]="!formGroup.valid" [ngClass]="{'disabled-save-btn' : formGroup.invalid}">
+        [disabled]="formGroup.valid" [ngClass]="{'disabled-save-btn' : !formGroup.invalid}">
           <mat-icon [ngClass]="{'disabled-save-btn-icon': !formGroup.invalid}">savings</mat-icon>
         </button>
       </div>

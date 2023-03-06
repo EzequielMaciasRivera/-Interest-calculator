@@ -39,3 +39,52 @@ $pretty-font-family:'Satisfy', cursive;
     text-align: center;
     font-family: $pretty-font-family;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 5px 10px;
+}
+
+@media (max-width: 30em) {
+    // 30 x 16px = 480px
+    table {
+        width: 100%;
+    }
+    .mat-mdc-table {
+        background: transparent;
+    }
+
+    table tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 1em;
+        margin-bottom: 1em;
+        height: auto;
+        background: rgb(137 49 98 / 25%);
+        border: 1.5px solid rgba(209, 213, 219, 0.3);
+    }
+
+    table td[data-title] {
+        display: flex;
+    }
+
+    table td[data-title]::before {
+       content: attr(data-title);
+       width: 10rem;
+    }
+
+    .mdc-data-table__cell, .mdc-data-table__header-cell {
+        border-bottom-width: 0px;
+        border-bottom-style: solid;
+        background: transparent;
+    }
+
+    .customTable {
+        border-radius: 20px;
+    }
+}

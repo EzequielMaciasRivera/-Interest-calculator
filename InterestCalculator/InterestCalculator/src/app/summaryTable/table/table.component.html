@@ -4,7 +4,7 @@
 </div>
 <div [hidden]="showPicture">
   <h2 class="globalTitle">Resultado del calculo de tu inversion</h2>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" aria-describedby="Interest table">
+  <table mat-table [dataSource]="dataSource" class="customTable" aria-describedby="Interest table">
 
     <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
@@ -12,31 +12,31 @@
     <!-- investmentYears Column -->
     <ng-container matColumnDef="investmentYears">
       <th mat-header-cell *matHeaderCellDef scope="col"> Año </th>
-      <td mat-cell *matCellDef="let element"> {{element.investmentYears}} </td>
+      <td data-title="Año" mat-cell *matCellDef="let element"> {{element.investmentYears}} </td>
     </ng-container>
 
     <!-- initialBalance Column -->
     <ng-container matColumnDef="initialBalance">
       <th mat-header-cell *matHeaderCellDef scope="col"> Saldo Inicial </th>
-      <td mat-cell *matCellDef="let element"> {{element.initialBalance}} </td>
+      <td data-title="Saldo Inicial" mat-cell *matCellDef="let element"> {{element.initialBalance}} </td>
     </ng-container>
 
     <!-- annualContribution Column -->
     <ng-container matColumnDef="annualContribution">
       <th mat-header-cell *matHeaderCellDef scope="col"> Rendimiento </th>
-      <td mat-cell *matCellDef="let element"> {{element.annualContribution}} </td>
+      <td data-title="Rendimiento" mat-cell *matCellDef="let element"> {{element.annualContribution}} </td>
     </ng-container>
 
     <!-- performance Column -->
     <ng-container matColumnDef="performance">
       <th mat-header-cell *matHeaderCellDef scope="col"> Aportación </th>
-      <td mat-cell *matCellDef="let element"> {{element.performance}} </td>
+      <td data-title="Aportación" mat-cell *matCellDef="let element"> {{element.performance}} </td>
     </ng-container>
 
     <!-- annualIcrease Column -->
     <ng-container matColumnDef="annualIcrease">
       <th mat-header-cell *matHeaderCellDef scope="col"> Saldo Final </th>
-      <td mat-cell *matCellDef="let element"> {{element.annualIcrease}} </td>
+      <td data-title="Saldo Final" mat-cell *matCellDef="let element"> {{element.annualIcrease}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

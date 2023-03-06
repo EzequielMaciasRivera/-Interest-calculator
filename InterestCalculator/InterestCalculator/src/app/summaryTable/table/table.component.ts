@@ -16,8 +16,8 @@ export class TableComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['investmentYears', 'initialBalance', 'annualContribution', 'performance', 'annualIcrease'];
   dataSource: any;
   ELEMENT_DATA: InvesmentData[] = [
-    {investmentYears: 1, initialBalance: 1000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
-    {investmentYears: 1, initialBalance: 1000, annualContribution: 12000, performance: 1800, annualIcrease: 30}
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 2, initialBalance: 1000, annualContribution: 12000, performance: 1800, annualIcrease: 30}
   ];
   constructor(private calculatorServiceService: CalculatorServiceService) {
     
