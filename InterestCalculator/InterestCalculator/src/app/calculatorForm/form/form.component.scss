@@ -18,14 +18,39 @@ $font-family: 'Lato', sans-serif;
     border: 1.5px solid rgba(209, 213, 219, 0.3);
     text-align: center;
   }
+
+.messageContainer {
+    position: relative;
+    margin-bottom: 2rem;
+    background: rgba(161, 27, 27, 0.25);
+}
+
+.message {
+    position: absolute;
+    margin: -1.5rem 1.2rem 0rem 1.2rem;
+    height: 3rem;
+    padding-top: 0.2rem;
+    background: rgba(255, 255, 255, 0.62);
+    border: 1px solid #dd32a8;
+    color: #b90380;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 39px;
+}
+
 .disabled-save-btn {
     background-color: rgb(150, 79, 127);
 }
-.disabled-save-btn-icon {
+
+.enabled-save-btn-icon {
     color: rgb(255, 255, 255);
 }
   @media (max-width: 500px) {
     .formCard {
         width: auto;
+    }
+    
+    .message {
+        margin: -1.5rem 1.2rem 0rem 0.2rem;
+        width: 98%;
     }
 }

@@ -14,39 +14,44 @@ import { HttpClientModule } from '@angular/common/http';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent implements OnInit{
-  formGroup: FormGroup;
-  /* model: InvesmentData = {
-    initialBalance: 0,
-    annualContribution: 0,
-    annualIcrease: 0,
-    investmentYears: 0,
-    performance: 0
-  } */
-  constructor(
-    private calculatorServiceService: CalculatorServiceService,
-    private formBuilder: FormBuilder
-  ) {
-    this.formGroup = this.formBuilder.group({
-      initialBalance: [, Validators.required],
-      annualContribution: [, Validators.required],
-      annualIcrease: [, Validators.required],
-      investmentYears: [, Validators.required],
-      performance: [, Validators.required],
-    });
+export class FormComponent {
+  ////////
+  defaultValue: any;
+  // result!: string;
+
+  interestCalculatorForm = new FormGroup({
+    initialBalance: new FormControl(1000, [Validators.required,Validators.min(1000)]),
+    annualContribution: new FormControl(0),
+    annualIncrease: new FormControl(0),
+    investmentYears: new FormControl(1, [Validators.required, Validators.min(1)
+    ]),
+    performance: new FormControl(1, [Validators.required, Validators.min(1)]),
+  });
+
+  constructor(private calculatorServiceService: CalculatorServiceService) {}
+
+  defaultValuesValidator(): void {
+    if (this.interestCalculatorForm.value.annualContribution === null) {
+      this.interestCalculatorForm.controls['annualContribution'].setValue(0);
+    }
+    if (this.interestCalculatorForm.value.annualIncrease === null) {
+      this.interestCalculatorForm.controls['annualIncrease'].setValue(0);
+    }
   }
-  ngOnInit(): void {
-    this.formGroup.valueChanges.subscribe();
-  }
-  onSubmit(formGroupValue: InvesmentData) {
+
+  onSubmit(): void {
+    this.defaultValuesValidator();
+
+
     this.calculatorServiceService.interestRequestData$.next(false);
-    console.log(formGroupValue);
-    this.calculatorServiceService
+    console.log(this.interestCalculatorForm);
+    /*  this.calculatorServiceService
       .requestCalculus(formGroupValue)
-      .subscribe((response: InvesmentData) => console.log(response));
+      .subscribe((response: InvesmentData) => console.log(response)); */
     /* this.calculatorServiceService.requestCalculus(this.model); */
-    /*  if (this.formularioContacto.valid)
-      this.resultado = 'Todos los datos son válidos';
-    else this.resultado = 'Hay datos inválidos en el formulario'; */
+
+   /*  if (this.interestCalculatorForm.valid)
+      this.result = 'Todos los datos son válidos';
+    else this.result = 'Hay datos inválidos en el formulario'; */
   }
 }
