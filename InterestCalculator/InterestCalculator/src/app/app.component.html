@@ -1,6 +1,27 @@
-<div class="header"><h1 class="pageTitle">Calculadora de interés compuesto</h1></div>
+<div class="parent header">
+  <div class="div1">
+    <h1 class="pageTitle">Calculadora de interés compuesto</h1>
+
+
+  </div>
+  <div class="div2">
+    <!-- Trigger/Open The Modal -->
+
+    <mat-icon class="info" (click)="openInfoModal()">info</mat-icon>
+    <!-- The Modal -->
+   <!--  <section class="modal" id="modal">
+      <div class="modal_title">
+        <h2>¡Hola, soy un modal!</h2>
+        <a href="#" class="modal_close">X</a>
+      </div>
+    </section> -->
+
+
+  </div>
+</div>
+
 <div class="container-fluid">
-  
+
   <div class="row marginTopContainer">
     <div class="col col-25">
       <div class="boxesDiv1"><app-form></app-form></div>
@@ -8,8 +29,8 @@
     <div class="col col-75">
       <div class="boxesDiv"> <app-table></app-table></div>
     </div>
-   
   </div>
+
 </div>
 <div class="row footerSetting"><app-footer></app-footer></div>
 <router-outlet></router-outlet>

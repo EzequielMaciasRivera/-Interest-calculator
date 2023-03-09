@@ -41,3 +41,12 @@ input[type=number] {
     display: none;
   }
 }
+
+.backdropBackground {
+  background-color: #002e71;
+  opacity: 0.9 !important;
+}
+
+.mat-mdc-dialog-content {
+  max-height: 85vh !important;
+}

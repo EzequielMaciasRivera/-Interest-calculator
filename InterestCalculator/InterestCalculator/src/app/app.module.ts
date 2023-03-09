@@ -1,3 +1,4 @@
+import { InfoComponent } from './info/info.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Material } from './material.module';
@@ -8,9 +9,11 @@ import { FormComponent } from './calculatorForm/form/form.component';
 import { TableComponent } from './summaryTable/table/table.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
+    InfoComponent,
     FormComponent,
     TableComponent,
     FooterComponent
@@ -23,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [InfoComponent]
 })
 export class AppModule { }

@@ -1,0 +1,51 @@
+h1 {
+    margin: 0;
+}
+
+.dialogHeader {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+}
+
+.titleContainer {
+    grid-area: 1 / 1 / 2 / 3;
+}
+.headerTitle {
+    color: white;
+    margin: 1rem;
+}
+.closeIconContainer {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+/////////////////////
+.closeIcon {
+    float: right;
+    color: white;
+    width: auto;
+}
+
+.content {
+    width: auto;
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+.subtitleGral {
+    font-family: "Lucida Sans", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: black;
+}
+
+.subtitles {
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 1.1rem;
+    color: black;
+}
+
+p {
+    font-size: 0.9rem;
+}
