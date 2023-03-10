@@ -36,6 +36,7 @@ input[type=number] {
 }
 
 @media (max-width: 30em) {
+
   // 30 x 16px = 480px
   table thead {
     display: none;
@@ -43,10 +44,51 @@ input[type=number] {
 }
 
 .backdropBackground {
-  background-color: #002e71;
-  opacity: 0.9 !important;
+  background: rgba(255, 255, 255, .25);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .mat-mdc-dialog-content {
   max-height: 85vh !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(150, 96, 138);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(250, 178, 210);
+  background: radial-gradient(circle, rgb(250, 178, 210) 43%, rgb(255, 255, 255) 100%);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(250, 178, 210);
+    background: radial-gradient(circle, rgb(211, 92, 145) 43%, rgb(194, 171, 171) 100%);
+}
+
+.mat-mdc-dialog-content::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}
+
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-color: #e355b987 !important;
+  --mdc-dialog-with-divider-divider-color: rgba(255, 255, 255, 0.12);
+  --mdc-dialog-subhead-color: rgba(255, 255, 255, 0.87);
+  --mdc-dialog-supporting-text-color: rgba(255, 255, 255, 0.6);
+}
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: var(--mdc-dialog-container-shape, var(--mdc-shape-medium, 25px)) !important;
 }

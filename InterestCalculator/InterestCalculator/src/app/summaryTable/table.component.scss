@@ -4,6 +4,12 @@ $pretty-font-family:'Satisfy', cursive;
 .globalTitle {
     font-family: $font-family;
 }
+
+.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .picture {
   background-color: palevioletred;
   font-size: 2rem;

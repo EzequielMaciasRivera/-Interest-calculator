@@ -2,6 +2,9 @@ h1 {
     margin: 0;
 }
 
+p {
+    color: white;
+}
 .dialogHeader {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -30,7 +33,7 @@ h1 {
 
 .content {
     width: auto;
-    padding: 0rem 1rem 1rem 1rem;
+    padding: 0rem 1rem 1rem 1.5rem;
 }
 
 .subtitleGral {
