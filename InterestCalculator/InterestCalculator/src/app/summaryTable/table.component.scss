@@ -1,4 +1,4 @@
-@import url(./../../../styles.scss);
+@import url(./../../styles.scss);
 $font-family: 'Lato', sans-serif;
 $pretty-font-family:'Satisfy', cursive;
 .globalTitle {
@@ -20,7 +20,7 @@ $pretty-font-family:'Satisfy', cursive;
   height: 19rem;
   text-align: -webkit-center;
   border-radius: 1rem;
-  background-image: url(./../../../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
+  background-image: url(./../../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
   background-size: cover;
   font-family: sans-serif;
   background-position: center;
