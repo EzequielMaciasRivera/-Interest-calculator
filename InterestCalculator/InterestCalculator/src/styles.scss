@@ -44,9 +44,8 @@ input[type=number] {
 }
 
 .backdropBackground {
-  background: rgba(255, 255, 255, .25);
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .mat-mdc-dialog-content {
