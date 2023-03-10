@@ -11,31 +11,26 @@ $pretty-font-family:'Satisfy', cursive;
     align-items: center;
 }
 .picture {
-  background-color: palevioletred;
-  font-size: 2rem;
-  color: white;
-  flex: 1 400px;
-  padding: 2rem;
-  margin: 0.5rem;
-  height: 19rem;
-  text-align: -webkit-center;
-  border-radius: 1rem;
-  background-image: url(./../../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
-  background-size: cover;
-  font-family: sans-serif;
-  background-position: center;
+      /* background-color: palevioletred; */
+      font-size: 2rem;
+      /* color: white; */
+      flex: 1 400px;
+      padding: 2rem;
+      /* margin: 0.5rem; */
+      height: 19rem;
+      text-align: -webkit-center;
+      border-radius: 20px;
+      background-image: url(../../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
+      background-size: cover;
+      font-family: sans-serif;
+      background-position: center;
 }
 
 .divCover {
-    padding: 2rem;
-    border-radius: 1rem;
-    font-size: 1rem;
-    color:white;
-    background: rgba(255, 255, 255, .25);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    border: 1.5px solid rgba(209, 213, 219, 0.3);
-    text-align: center;
+       float: right;
+       margin-top: 8rem;
+       width: 15rem;
+       height: 6rem;
 }
 .divLetter {
     padding-top: 3rem;
@@ -56,6 +51,14 @@ td, th {
 
 @media (max-width: 30em) {
     // 30 x 16px = 480px
+    .divCover {
+        float: right;
+        margin-top: 23rem;
+        width: 15rem;
+        height: 6rem;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
     table {
         width: 100%;
     }

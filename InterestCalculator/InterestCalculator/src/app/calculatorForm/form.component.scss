@@ -1,17 +1,11 @@
-@import url(./../../styles.scss);
-$font-family: 'Lato', sans-serif;
-.globalTitle {
-    font-family: $font-family;
-    font-size: 1.2rem;
-}
 .formCard {
     width: 22rem;
     height: auto;
-    padding: 2rem;
+    padding: 2rem 0rem;
     border-radius: 1rem;
     font-size: 1rem;
-    color:white;
-    background: rgba(255, 255, 255, .25);
+    color: white;
+    background: rgba(255, 255, 255, 0.25);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border: 1.5px solid rgba(209, 213, 219, 0.3);
