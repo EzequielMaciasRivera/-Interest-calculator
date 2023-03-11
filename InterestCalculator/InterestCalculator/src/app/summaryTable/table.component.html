@@ -1,5 +1,5 @@
 <div [hidden]="!showPicture" class="divCover">
-  <!-- <div class="picture"></div> -->
+  <div class="picture"></div>
   
   <h2 class="divLetter">Asegura tu futuro!!</h2>
 </div>
@@ -9,6 +9,7 @@
     <p>Ganancias por Inversión: $24,946.</p>
     <p>Monto Final: $61,307.</p>
   </div>
+  <div class="tableContainer">
   <table mat-table [dataSource]="dataSource" aria-describedby="Interest table">
 
     <!--- Note that these columns can be defined in any order.
@@ -47,5 +48,8 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+  <mat-paginator [length]="resultsLength" [pageSize]="30" aria-label="Select page of GitHub search results"></mat-paginator>
+</div>
+
   <app-calculator-graph></app-calculator-graph>
 </div>

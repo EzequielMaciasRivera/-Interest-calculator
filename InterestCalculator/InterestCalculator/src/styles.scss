@@ -9,6 +9,13 @@ body {
   height: 100%;
 }
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -73,7 +80,7 @@ input[type=number] {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(250, 178, 210);
-    background: radial-gradient(circle, rgb(211, 92, 145) 43%, rgb(194, 171, 171) 100%);
+  background: radial-gradient(circle, rgb(211, 92, 145) 43%, rgb(194, 171, 171) 100%);
 }
 
 .mat-mdc-dialog-content::-webkit-scrollbar-thumb {

@@ -11,27 +11,21 @@ $pretty-font-family:'Satisfy', cursive;
     align-items: center;
 }
 .picture {
-      /* background-color: palevioletred; */
-      font-size: 2rem;
-      /* color: white; */
-      flex: 1 400px;
-      padding: 2rem;
-      /* margin: 0.5rem; */
-      height: 19rem;
-      text-align: -webkit-center;
-      border-radius: 20px;
-      background-image: url(../../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
-      background-size: cover;
-      font-family: sans-serif;
-      background-position: center;
+    height: 19rem;
+    text-align: -webkit-center;
+    border-radius: 14px;
+    background-image: url(../../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    background-position: center;
 }
 
-.divCover {
+/* .divCover {
        float: right;
        margin-top: 8rem;
        width: 15rem;
        height: 6rem;
-}
+} */
 .divLetter {
     padding-top: 3rem;
     border-radius: 1rem;
@@ -40,7 +34,12 @@ $pretty-font-family:'Satisfy', cursive;
     text-align: center;
     font-family: $pretty-font-family;
 }
-
+.tableContainer {
+    height: 3rem;
+    width: auto;
+    max-height: 3rem;
+    overflow-y: scroll;
+}
 table {
     border-collapse: collapse;
 }

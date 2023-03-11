@@ -1,8 +1,9 @@
 import { CalculatorServiceService } from 'src/app/services/calculator.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatTableDataSourcePaginator } from '@angular/material/table';
 import { Subscription } from 'rxjs';
 import { InvesmentData } from 'src/app/models/investmentData.model';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-table',
@@ -10,14 +11,44 @@ import { InvesmentData } from 'src/app/models/investmentData.model';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit, OnDestroy {
+  resultsLength = 0;
   interestRequestData: Subscription;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   data: any;
   showPicture = true;
   displayedColumns: string[] = ['investmentYears', 'initialBalance', 'annualContribution', 'performance', 'annualIcrease'];
   dataSource: any;
   ELEMENT_DATA: InvesmentData[] = [
     {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
-    {investmentYears: 2, initialBalance: 1000, annualContribution: 12000, performance: 1800, annualIcrease: 30}
+    {investmentYears: 2, initialBalance: 1000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
+    {investmentYears: 1, initialBalance: 5000, annualContribution: 12000, performance: 1800, annualIcrease: 30},
   ];
   constructor(private calculatorServiceService: CalculatorServiceService) {
     

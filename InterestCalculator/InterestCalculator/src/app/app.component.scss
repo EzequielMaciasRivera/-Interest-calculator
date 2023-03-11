@@ -1,8 +1,10 @@
 @import url(./../styles.scss);
 $font-family: 'Lato', sans-serif;
+
 h1 {
   padding: 0;
 }
+
 .globalTitle {
   font-family: "Lato", sans-serif;
   font-size: 1.4rem;
@@ -31,6 +33,14 @@ h1 {
 }
 
 .div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.div4 {
   grid-area: 1 / 2 / 2 / 3;
 }
 
@@ -155,7 +165,7 @@ input[type=number] {
   }
 }
 
-.img{
+.img {
   /* margin:10px auto;
   border-radius:5px;
   border: 1px solid #999;
@@ -175,15 +185,17 @@ input[type=number] {
   height: 32rem;
   text-align: -webkit-center;
   border-radius: 1rem;
-  background:url(../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
+  background: url(../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
   background-size: cover;
   font-family: sans-serif;
   background-position: center;
-  }
-.img img{
+}
+
+.img img {
   width: 100%;
 }
-@media all and (min-width: 500px) and (max-width: 1000px)
+
+/* @media all and (min-width: 500px) and (max-width: 1000px)
 {  
 .img{
   margin:20px auto;
@@ -201,4 +213,61 @@ input[type=number] {
 }
 .img img{
    width:100%;
+} */
+
+
+/* .container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0em 2em;
+  grid-auto-flow: row dense;
+  grid-template-areas:
+    "form table table"
+    "footer footer footer";
+}
+
+.form { grid-area: form; }
+
+.table { grid-area: table; }
+
+.footer { grid-area: footer; } */
+
+section.banner {}
+
+.containerB {
+  margin: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.col1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.imgBanner {
+  width: 70%;
+}
+
+.col2 {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 37rem;
+}
+
+.boxS {
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 55px 5px rgb(0 0 0 / 6%);
+}
+
+.boxS img {
+  width: 100px;
 }
