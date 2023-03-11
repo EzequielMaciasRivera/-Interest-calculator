@@ -1,0 +1,78 @@
+<div class="formCard">
+  
+  <form [formGroup]="interestCalculatorForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field class="form-element">
+      <mat-label for="initialBalance">$ Inversión inicial</mat-label>
+      <input type="number" matInput name="initialBalance" placeholder="$0" formControlName="initialBalance"
+        required="required">
+      <mat-icon matSuffix>edit_calendar</mat-icon>
+    </mat-form-field>
+    <div class="messageContainer"
+      *ngIf="this.interestCalculatorForm.get('initialBalance')?.errors?.['required'] || this.interestCalculatorForm.get('initialBalance')?.errors?.['min']">
+      <div class="message">
+        <p *ngIf="this.interestCalculatorForm.get('initialBalance')?.errors?.['required']">
+          La inversión inicial no puede quedar vacía
+        </p>
+        <p *ngIf="this.interestCalculatorForm.get('initialBalance')?.errors?.['min']">
+          Debe tener como mínimo $1000 de inversión
+        </p>
+      </div>
+    </div>
+
+    <mat-form-field class="form-element">
+      <mat-label for="annualContribution">$ Aportación anual</mat-label>
+      <input type="number" matInput name="annualContribution" formControlName="annualContribution" placeholder="$0">
+      <mat-icon matSuffix>trending_up</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="form-element">
+      <mat-label for="annualIncrease">% Incremento anual</mat-label>
+      <input type="number" matInput name="annualIncrease" formControlName="annualIncrease" placeholder="0%">
+      <mat-icon matSuffix>timeline</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="form-element">
+      <mat-label for="investmentYears">Años de inversión</mat-label>
+      <input type="number" matInput name="investmentYears" formControlName="investmentYears" placeholder="0"
+        required="required">
+      <mat-icon matSuffix>calendar_month</mat-icon>
+    </mat-form-field>
+    <div class="messageContainer"
+      *ngIf="this.interestCalculatorForm.get('investmentYears')?.errors?.['required'] || this.interestCalculatorForm.get('investmentYears')?.errors?.['min']">
+      <div class="message">
+        <p *ngIf="this.interestCalculatorForm.get('investmentYears')?.errors?.['required']">
+          Los años de inversión no puede quedar vacío
+        </p>
+        <p *ngIf="this.interestCalculatorForm.get('investmentYears')?.errors?.['min']">
+          Debe tener como mínimo 1 año de inversión
+        </p>
+      </div>
+    </div>
+
+    <mat-form-field class="form-element">
+      <mat-label for="performance">% Rendimiento</mat-label>
+      <input type="number" matInput name="performance" formControlName="performance" placeholder="0%"
+        required="required">
+      <mat-icon matSuffix>leaderboard</mat-icon>
+    </mat-form-field>
+    <div class="messageContainer"
+      *ngIf="this.interestCalculatorForm.get('performance')?.errors?.['required'] || this.interestCalculatorForm.get('performance')?.errors?.['min']">
+      <div class="message">
+        <p *ngIf="this.interestCalculatorForm.get('performance')?.errors?.['required']">
+          El % de rendimiento no puede quedar vacío
+        </p>
+        <p *ngIf="this.interestCalculatorForm.get('performance')?.errors?.['min']">
+          El % de rendimiento deber ser mayor a 0
+        </p>
+      </div>
+    </div>
+
+    <div class="example-button-container">
+      <button type="submit" mat-fab color="accent" aria-label="Example icon button with a bookmark icon"
+        [disabled]="!interestCalculatorForm.valid" [ngClass]="{'disabled-save-btn' : interestCalculatorForm.invalid}">
+        <mat-icon [ngClass]="{'enabled-save-btn-icon': !interestCalculatorForm.invalid}">savings</mat-icon>
+      </button>
+    </div>
+  </form>
+</div>
