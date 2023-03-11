@@ -5,7 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { InvesmentData } from 'src/app/models/investmentData.model';
+import { InvesmentData } from 'src/app/models/investmentData';
 import { CalculatorServiceService } from 'src/app/services/calculator.service';
 import { HttpClientModule } from '@angular/common/http';
 

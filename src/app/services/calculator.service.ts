@@ -1,7 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { InvesmentData } from '../models/investmentData.model';
+import { InvesmentData } from '../models/investmentData';
 
 @Injectable({
   providedIn: 'root'

@@ -1,4 +1,4 @@
-import { InvesmentData } from './investmentData.model';
+import { InvesmentData } from './investmentData';
 
 describe('InvesmentData', () => {
     it('should create an instance', () => {
