@@ -36,10 +36,6 @@ h1 {
   grid-area: 1 / 2 / 2 / 3;
 }
 
-.div3 {
-  grid-area: 1 / 1 / 2 / 3;
-}
-
 .div4 {
   grid-area: 1 / 2 / 2 / 3;
 }
@@ -92,16 +88,6 @@ h1 {
   background-size: cover;
   font-family: sans-serif;
   background-position: center;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
 }
 
 // dialog
@@ -160,72 +146,7 @@ input[type=number] {
   }
 }
 
-.img {
-  /* margin:10px auto;
-  border-radius:5px;
-  border: 1px solid #999;
-  padding:13px;
-  width:220px;
-  height:220px;
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
-  
-  background-size: cover; */
 
-
-
-  flex: 1 400px;
-  padding: 2rem;
-  margin: 0.5rem;
-  height: 32rem;
-  text-align: -webkit-center;
-  border-radius: 1rem;
-  background: url(../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
-  background-size: cover;
-  font-family: sans-serif;
-  background-position: center;
-}
-
-.img img {
-  width: 100%;
-}
-
-/* @media all and (min-width: 500px) and (max-width: 1000px)
-{  
-.img{
-  margin:20px auto;
-  border-radius:5px;
-  border: 1px solid #999;
-  padding:13px;
-  width:300px;
-  height:300px;
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
-  background:url(../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
-  background-size: cover;
-  
-  }
-}
-.img img{
-   width:100%;
-} */
-
-
-/* .container {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0em 2em;
-  grid-auto-flow: row dense;
-  grid-template-areas:
-    "form table table"
-    "footer footer footer";
-}
-
-.form { grid-area: form; }
-
-.table { grid-area: table; }
-
-.footer { grid-area: footer; } */
 
 section.banner {}
 
@@ -242,27 +163,10 @@ section.banner {}
   justify-content: flex-start;
 }
 
-.imgBanner {
-  width: 70%;
-}
-
 .col2 {
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   max-width: 37rem;
-}
-
-.boxS {
-  padding: 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 0px 55px 5px rgb(0 0 0 / 6%);
-}
-
-.boxS img {
-  width: 100px;
 }

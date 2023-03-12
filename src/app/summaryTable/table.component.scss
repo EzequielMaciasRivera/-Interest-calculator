@@ -20,29 +20,19 @@ $pretty-font-family: 'Satisfy', cursive;
     background-size: cover;
     font-family: sans-serif;
     background-position: center;
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #7c7c7ce3, -20px -20px 60px #ffffff;
 }
 
-/* .divCover {
-       float: right;
-       margin-top: 8rem;
-       width: 15rem;
-       height: 6rem;
-} */
 .divLetter {
     padding-top: 3rem;
     border-radius: 1rem;
     font-size: 2rem;
-    color: white;
+    color: #02dfdf;
     text-align: center;
     font-family: $pretty-font-family;
 }
 
-/* .tableContainer {
-    height: 3rem;
-    width: auto;
-    max-height: 3rem;
-    overflow-y: scroll;
-} */
 table {
     border-collapse: collapse;
 }
@@ -98,9 +88,5 @@ th {
         border-bottom-width: 0px;
         border-bottom-style: solid;
         background: transparent;
-    }
-
-    .customTable {
-        border-radius: 20px;
     }
 }
