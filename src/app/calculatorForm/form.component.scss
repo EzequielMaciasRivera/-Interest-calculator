@@ -1,7 +1,7 @@
 .formCard {
     width: 22rem;
     height: auto;
-    padding: 2rem 0rem;
+    padding: 2rem 2rem;
     border-radius: 1rem;
     font-size: 1rem;
     color: white;
@@ -42,6 +42,7 @@
 @media (max-width: 500px) {
     .formCard {
         width: auto;
+        padding: 2rem 4rem;
     }
 
     .message {

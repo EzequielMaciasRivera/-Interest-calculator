@@ -79,7 +79,7 @@ input[type=number] {
 
 /* scrollbar Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(150, 96, 138);
+  box-shadow: inset 0 0 5px rgb(96, 146, 150);
   border-radius: 10px;
 }
 
@@ -93,7 +93,7 @@ input[type=number] {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(250, 178, 210);
-  background: radial-gradient(circle, rgb(211, 92, 145) 43%, rgb(194, 171, 171) 100%);
+  background: radial-gradient(circle, rgb(51, 211, 211) 43%, rgb(194, 171, 171) 100%);
 }
 
 .mat-mdc-dialog-content::-webkit-scrollbar-thumb {
