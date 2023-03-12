@@ -6,6 +6,10 @@ $pretty-font-family: 'Satisfy', cursive;
     font-family: $font-family;
 }
 
+.centerItems {
+    text-align: center;
+}
+
 .results {
     display: flex;
     justify-content: center;

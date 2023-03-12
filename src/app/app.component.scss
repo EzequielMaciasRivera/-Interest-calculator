@@ -36,10 +36,6 @@ h1 {
   grid-area: 1 / 2 / 2 / 3;
 }
 
-.div4 {
-  grid-area: 1 / 2 / 2 / 3;
-}
-
 .info {
   cursor: pointer;
   color: #fd1fae;
@@ -67,27 +63,6 @@ h1 {
 
 .marginTopContainer {
   margin-top: 6.5rem;
-}
-
-
-
-.section {
-  display: flex;
-  width: 98.8%;
-  height: 100vh;
-  padding: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.boxesDiv1 {
-  font-size: 2rem;
-  color: white;
-  flex: 1 400px;
-  padding: 0rem 1rem 1rem 1rem;
-  border-radius: 1rem;
-  background-size: cover;
-  font-family: sans-serif;
-  background-position: center;
 }
 
 // dialog
@@ -146,14 +121,10 @@ h1 {
   }
 }
 
-
-
-section.banner {}
-
 .containerB {
   margin: 0 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
   grid-gap: 2rem;
 }
 
@@ -164,9 +135,19 @@ section.banner {}
 }
 
 .col2 {
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 1rem 0rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   max-width: 37rem;
+}
+
+@media (min-width: 999px) {
+  .containerB {
+    grid-gap: 0rem;
+  }
+
+  .col1 {
+    margin-left: 4rem;
+  }
 }
