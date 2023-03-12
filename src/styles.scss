@@ -4,6 +4,12 @@
 $font-family: 'Lato', sans-serif;
 $pretty-font-family: 'Satisfy', cursive;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -20,12 +26,14 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   margin: 0;
   font-family: 'Lato', sans-serif;
   background: url(./assets/fondoCute.jpg);
   background-size: cover;
-  /*  background: rgb(250, 178, 210);
-  background: radial-gradient(circle, rgba(250, 178, 210, 1) 43%, rgba(255, 255, 255, 1) 100%); */
+  background-repeat: no-repeat;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -103,4 +111,10 @@ input[type=number] {
 
 .mat-mdc-dialog-container .mdc-dialog__surface {
   border-radius: var(--mdc-dialog-container-shape, var(--mdc-shape-medium, 25px)) !important;
+}
+
+.footer {
+  margin-top: auto;
+  bottom: 0px;
+  width: 100%;
 }
