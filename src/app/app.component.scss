@@ -1,6 +1,19 @@
 @import url(./../styles.scss);
 $font-family: 'Lato', sans-serif;
 
+.grid-container>* {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 1.2rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+
+}
+
 h1 {
   padding: 0;
 }
