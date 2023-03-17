@@ -55,14 +55,10 @@ th {
 @media (max-width: 30em) {
 
     // 30 x 16px = 480px
-    /* .divCover {
-        float: right;
-        margin-top: 23rem;
-        width: 15rem;
-        height: 6rem;
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
-    } */
+    .cotainerTable {
+        background: transparent;
+    }
+
     .picture {
         height: 23rem;
         width: 22rem;
