@@ -3,7 +3,7 @@ h1 {
 }
 
 p {
-    color: white;
+    color: #d7077a;
 }
 
 .dialogHeader {
@@ -12,6 +12,11 @@ p {
     grid-template-rows: 1fr;
     grid-column-gap: 50px;
     grid-row-gap: 0px;
+    background: url(../../assets/Alcancias.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    border-radius: 20px;
 }
 
 .titleContainer {
@@ -19,7 +24,7 @@ p {
 }
 
 .headerTitle {
-    color: white;
+    color: #0dababd1;
     margin: 1rem;
 }
 
@@ -29,13 +34,13 @@ p {
 
 .closeIcon {
     float: right;
-    color: white;
+    color: #fc6789;
     width: auto;
 }
 
 .content {
     width: auto;
-    padding: 0rem 1rem 1rem 1.5rem;
+    padding: 1rem 1rem 1rem 1.5rem;
 }
 
 .subtitleGral {

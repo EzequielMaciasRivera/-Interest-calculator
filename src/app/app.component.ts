@@ -18,7 +18,7 @@ export class AppComponent {
   openInfoModal(): void {
     const mobile = window.innerWidth <= 720;
     const abrirDialog = {
-      panelClass: ['rotate-scale-up'],
+      panelClass: 'rotate-scale-up',
       backdropClass: 'backdropBackground',
       autoFocus: false,
       position: { right: '0', top: '0' },
