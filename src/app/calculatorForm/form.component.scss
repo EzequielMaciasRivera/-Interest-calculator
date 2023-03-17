@@ -29,6 +29,8 @@
     color: #b90380;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 39px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 26px;
 }
 
 .disabled-save-btn {
@@ -37,16 +39,4 @@
 
 .enabled-save-btn-icon {
     color: rgb(255, 255, 255);
-}
-
-@media (max-width: 500px) {
-    .formCard {
-        width: auto;
-        padding: 2rem 4rem;
-    }
-
-    .message {
-        margin: -1.5rem 1.2rem 0rem 0.2rem;
-        width: 98%;
-    }
 }

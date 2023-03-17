@@ -10,6 +10,11 @@ $pretty-font-family: 'Satisfy', cursive;
     text-align: center;
 }
 
+.cotainerTable {
+    background-color: #02dfdf;
+    border-radius: 10px;
+}
+
 .results {
     display: flex;
     justify-content: center;
@@ -17,7 +22,8 @@ $pretty-font-family: 'Satisfy', cursive;
 }
 
 .picture {
-    height: 19rem;
+    height: 22rem;
+    width: 40rem;
     text-align: -webkit-center;
     border-radius: 14px;
     background-image: url(../../assets/sonriendo-alegremente-sintiendose-feliz-mostrando-concepto.jpg);
@@ -49,13 +55,17 @@ th {
 @media (max-width: 30em) {
 
     // 30 x 16px = 480px
-    .divCover {
+    /* .divCover {
         float: right;
         margin-top: 23rem;
         width: 15rem;
         height: 6rem;
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
+    } */
+    .picture {
+        height: 23rem;
+        width: 22rem;
     }
 
     table {
@@ -74,7 +84,7 @@ th {
         padding: 1em;
         margin-bottom: 1em;
         height: auto;
-        background: rgb(137 49 98 / 25%);
+        background: rgb(199 63 139 / 62%);
         border: 1.5px solid rgba(209, 213, 219, 0.3);
     }
 
@@ -92,5 +102,11 @@ th {
         border-bottom-width: 0px;
         border-bottom-style: solid;
         background: transparent;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 700px) {
+    .picture {
+        width: 28rem;
     }
 }

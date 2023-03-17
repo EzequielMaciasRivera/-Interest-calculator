@@ -1,35 +1,22 @@
-<div class="grid-container">
-  <header class="headr">Header</header>
-  <aside class="sidebar">Calculator</aside>
-  <article class="main">Table</article>
-  <footer class="fo">Footer</footer>
-</div>
-
-<!-- <div class="parent header">
-  <div class="div1">
+<div class="header">
+  <div class="">
     <h1 class="pageTitle">Calculadora de interés compuesto</h1>
-
-
   </div>
-  <div class="div2">
+  <div class="">
     <mat-icon class="info" (click)="openInfoModal()">info</mat-icon>
   </div>
 </div>
 
 <div class="marginTopContainer">
-  <h1 class="globalTitle">
+  <h1 class="globalSubTitle">
     Calcula el monto que podrías generar al realizar una inversión como inversionista independiente
   </h1>
 </div>
 
-<section class="banner">
-  <div class="containerB">
-    <div class="boxB col1">
-      <app-form></app-form>
-    </div>
-    <div class="boxB col2">
-      <app-table></app-table>
-    </div>
-  </div>
-</section>
-<app-footer></app-footer> -->
+<div class="flexContainerMain">
+  <app-form></app-form>
+  <app-table></app-table>
+</div>
+<app-calculator-graph class="center"></app-calculator-graph>
+
+<app-footer class="footer"></app-footer>

@@ -4,12 +4,15 @@
   <h2 class="divLetter">Asegura tu futuro!!</h2>
 </div>
 <div [hidden]="showPicture">
-  <h2 class="globalTitle">Resultado del cálculo de tu inversión</h2>
-  <div class="results">
-    <p>Ganancias por Inversión: $24,946.</p>
-    <p>Monto Final: $61,307.</p>
-  </div>
+
   <div class="centerItems">
+    <h2 class="globalTitle">Resultado del cálculo de tu inversión</h2>
+    <div class="results">
+      <p>Ganancias por Inversión: $24,946.</p>
+      <p>Monto Final: $61,307.</p>
+    </div>
+  </div>
+  <div class="cotainerTable">
     <table mat-table [dataSource]="dataSource" aria-describedby="Interest table">
 
       <!--- Note that these columns can be defined in any order.
@@ -50,6 +53,4 @@
     </table>
     <mat-paginator [length]="resultsLength" [pageSize]="5" aria-label="Select page of results"></mat-paginator>
   </div>
-
-  <app-calculator-graph></app-calculator-graph>
 </div>

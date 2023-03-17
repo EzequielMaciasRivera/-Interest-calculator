@@ -1,28 +1,24 @@
 @import url(./../styles.scss);
 $font-family: 'Lato', sans-serif;
 
-.grid-container>* {
-  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 1.2rem;
-  padding: 10px;
-  text-align: center;
-}
-
-.grid-container {
-  display: grid;
-  gap: 10px;
-
-}
-
 h1 {
   padding: 0;
 }
 
-.globalTitle {
-  font-family: "Lato", sans-serif;
-  font-size: 1.4rem;
-  color: #783d66;
-  padding: 2rem 2rem 0rem 2rem;
+.header {
+  height: 7rem;
+  width: 100%;
+  z-index: 40;
+  justify-content: space-between;
+  top: 0;
+  display: flex;
+  position: fixed;
+  border-radius: 0px 0px 14px 121px;
+  -moz-border-radius: 0px 0px 14px 121px;
+  -webkit-border-radius: 0px 0px 172px 16px;
+  border: 0px solid #000000;
+  background: rgb(250, 178, 210);
+  background: radial-gradient(circle, rgb(255 175 210) 28%, rgb(255, 255, 255) 79%);
 }
 
 .pageTitle {
@@ -33,25 +29,9 @@ h1 {
   color: #87357d;
 }
 
-.parent {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 50px;
-  grid-row-gap: 0px;
-}
-
-.div1 {
-  grid-area: 1 / 1 / 2 / 3;
-}
-
-.div2 {
-  grid-area: 1 / 2 / 2 / 3;
-}
-
 .info {
   cursor: pointer;
-  color: #fd1fae;
+  color: #02dfdf;
   font-size: 2rem;
   height: auto;
   padding-right: 2.8rem;
@@ -59,23 +39,21 @@ h1 {
   margin-top: 2rem;
 }
 
-.header {
-  height: 7rem;
-  width: 100%;
-  margin-left: -0.5rem;
-  z-index: 40;
-  top: 0;
-  position: fixed;
-  border-radius: 0px 0px 14px 121px;
-  -moz-border-radius: 0px 0px 14px 121px;
-  -webkit-border-radius: 0px 0px 172px 16px;
-  border: 0px solid #000000;
-  background: rgb(250, 178, 210);
-  background: radial-gradient(circle, rgb(255 175 210) 28%, rgb(255, 255, 255) 79%);
-}
-
 .marginTopContainer {
   margin-top: 6.5rem;
+}
+
+.flexContainerMain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // dialog
@@ -131,36 +109,5 @@ h1 {
   100% {
     -webkit-transform: scale(1) rotateZ(360deg);
     transform: scale(1) rotateZ(360deg);
-  }
-}
-
-.containerB {
-  margin: 0 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-  grid-gap: 2rem;
-}
-
-.col1 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.col2 {
-  padding: 1rem 2rem 1rem 0rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 37rem;
-}
-
-@media (min-width: 999px) {
-  .containerB {
-    grid-gap: 0rem;
-  }
-
-  .col1 {
-    margin-left: 4rem;
   }
 }

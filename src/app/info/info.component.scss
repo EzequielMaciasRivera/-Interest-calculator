@@ -5,6 +5,7 @@ h1 {
 p {
     color: white;
 }
+
 .dialogHeader {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -16,15 +17,16 @@ p {
 .titleContainer {
     grid-area: 1 / 1 / 2 / 3;
 }
+
 .headerTitle {
     color: white;
     margin: 1rem;
 }
+
 .closeIconContainer {
     grid-area: 1 / 2 / 2 / 3;
 }
 
-/////////////////////
 .closeIcon {
     float: right;
     color: white;
