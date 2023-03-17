@@ -58,7 +58,7 @@ input[type=number] {
 
 .mat-mdc-fab.mat-accent,
 .mat-mdc-mini-fab.mat-accent {
-  --mdc-fab-container-color: #ff6bad;
+  --mdc-fab-container-color: #a6e1e2;
   --mdc-fab-icon-color: #000;
   --mat-mdc-fab-color: #000;
 }
@@ -122,7 +122,7 @@ input[type=number] {
 }
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-  background-color: #c31c887a !important;
+  background-color: rgb(255 114 146) !important;
   border-radius: 16px !important;
 }
 
@@ -131,7 +131,7 @@ input[type=number] {
 }
 
 .mat-mdc-paginator {
-  background: #02dfdf !important;
+  background: #86cfd0 !important;
   border-radius: 20px !important;
 }
 

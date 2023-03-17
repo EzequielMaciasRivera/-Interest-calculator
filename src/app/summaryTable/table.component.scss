@@ -2,8 +2,21 @@
 $font-family: 'Lato', sans-serif;
 $pretty-font-family: 'Satisfy', cursive;
 
+p {
+    font-size: 1.4rem;
+}
+
+.revenius {
+    color: #02dfdf;
+}
+
+.finalBalance {
+    color: #ff7292;
+}
+
 .globalTitle {
     font-family: $font-family;
+    font-size: 1.4rem;
 }
 
 .centerItems {
@@ -11,14 +24,9 @@ $pretty-font-family: 'Satisfy', cursive;
 }
 
 .cotainerTable {
-    background-color: #02dfdf;
+    background-color: #86cfd0;
     border-radius: 10px;
-}
-
-.results {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 40rem;
 }
 
 .picture {
@@ -57,6 +65,7 @@ th {
     // 30 x 16px = 480px
     .cotainerTable {
         background: transparent;
+        width: auto;
     }
 
     .picture {
@@ -103,6 +112,10 @@ th {
 
 @media (min-width: 481px) and (max-width: 700px) {
     .picture {
+        width: 28rem;
+    }
+
+    .cotainerTable {
         width: 28rem;
     }
 }
