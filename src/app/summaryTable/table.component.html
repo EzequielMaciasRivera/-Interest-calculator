@@ -1,0 +1,54 @@
+<div [hidden]="!showPicture" class="divCover">
+  <div class="picture"></div>
+
+  <h2 class="divLetter">Asegura tu futuro!!</h2>
+</div>
+<div [hidden]="showPicture">
+
+  <div class="centerItems">
+    <h2 class="globalTitle">Resultado del cálculo de tu inversión</h2>
+    <p>Ganancias por Inversión: <span class="revenius">$24,946</span></p>
+    <p>Monto Final: <span class="finalBalance">$61,307</span></p>
+  </div>
+  <div class="cotainerTable">
+    <table mat-table [dataSource]="dataSource" aria-describedby="Interest table">
+
+      <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- investmentYears Column -->
+      <ng-container matColumnDef="investmentYears">
+        <th mat-header-cell *matHeaderCellDef scope="col"> Año </th>
+        <td data-title="Año" mat-cell *matCellDef="let element"> {{element.investmentYears}} </td>
+      </ng-container>
+
+      <!-- initialBalance Column -->
+      <ng-container matColumnDef="initialBalance">
+        <th mat-header-cell *matHeaderCellDef scope="col"> Saldo Inicial </th>
+        <td data-title="Saldo Inicial" mat-cell *matCellDef="let element"> {{element.initialBalance}} </td>
+      </ng-container>
+
+      <!-- annualContribution Column -->
+      <ng-container matColumnDef="annualContribution">
+        <th mat-header-cell *matHeaderCellDef scope="col"> Rendimiento </th>
+        <td data-title="Rendimiento" mat-cell *matCellDef="let element"> {{element.annualContribution}} </td>
+      </ng-container>
+
+      <!-- performance Column -->
+      <ng-container matColumnDef="performance">
+        <th mat-header-cell *matHeaderCellDef scope="col"> Aportación </th>
+        <td data-title="Aportación" mat-cell *matCellDef="let element"> {{element.performance}} </td>
+      </ng-container>
+
+      <!-- annualIcrease Column -->
+      <ng-container matColumnDef="annualIcrease">
+        <th mat-header-cell *matHeaderCellDef scope="col"> Saldo Final </th>
+        <td data-title="Saldo Final" mat-cell *matCellDef="let element"> {{element.annualIcrease}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [length]="resultsLength" [pageSize]="5" aria-label="Select page of results"></mat-paginator>
+  </div>
+</div>

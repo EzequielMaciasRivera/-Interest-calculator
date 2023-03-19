@@ -1,0 +1,57 @@
+@import url(./../styles.scss);
+$font-family: 'Lato', sans-serif;
+
+h1 {
+  padding: 0;
+}
+
+.header {
+  height: 7rem;
+  width: 100%;
+  z-index: 40;
+  justify-content: space-between;
+  top: 0;
+  display: flex;
+  position: fixed;
+  border-radius: 0px 0px 14px 121px;
+  -moz-border-radius: 0px 0px 14px 121px;
+  -webkit-border-radius: 0px 0px 172px 16px;
+  border: 0px solid #000000;
+  background: rgb(250, 178, 210);
+  background: radial-gradient(circle, rgb(255 175 210) 28%, rgb(255, 255, 255) 79%);
+}
+
+.pageTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  padding-left: 1rem;
+  margin: 1.9rem 0 0 1rem;
+  color: #87357d;
+}
+
+.info {
+  cursor: pointer;
+  color: #02dfdf;
+  font-size: 2rem;
+  height: auto;
+  padding-right: 2.8rem;
+  float: right;
+  margin-top: 2rem;
+}
+
+.marginTopContainer {
+  margin-top: 6.5rem;
+}
+
+.flexContainerMain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

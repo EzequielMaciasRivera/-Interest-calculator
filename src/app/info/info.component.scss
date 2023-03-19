@@ -1,0 +1,61 @@
+h1 {
+    margin: 0;
+}
+
+p {
+    color: #d7077a;
+}
+
+.dialogHeader {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+    background: url(../../assets/Alcancias.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    border-radius: 20px;
+}
+
+.titleContainer {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.headerTitle {
+    color: #0dababd1;
+    margin: 1rem;
+}
+
+.closeIconContainer {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.closeIcon {
+    float: right;
+    color: #fc6789;
+    width: auto;
+}
+
+.content {
+    width: auto;
+    padding: 1rem 1rem 1rem 1.5rem;
+}
+
+.subtitleGral {
+    font-family: "Lucida Sans", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: black;
+}
+
+.subtitles {
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 1.1rem;
+    color: black;
+}
+
+p {
+    font-size: 0.9rem;
+}

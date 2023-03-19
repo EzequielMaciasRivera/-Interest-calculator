@@ -1,0 +1,18 @@
+@import url(./../../styles.scss);
+$font-family: 'Lato', sans-serif;
+
+.divCover {
+    color: white;
+    text-align: center;
+    font-family: $font-family;
+    font-size: 1rem;
+    background: #bd1782b3;
+    border-radius: 0px 88px 0px 59px;
+    height: 3rem;
+    padding-top: 1rem;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
